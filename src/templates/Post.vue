@@ -9,7 +9,7 @@
         </p>
       </div>
       <div class="post-content">
-        <p v-html="$page.post.content" />
+        <div v-html="$page.post.content"></div>
       </div>
       <hr />
       <!-- <div class="post__tags">
