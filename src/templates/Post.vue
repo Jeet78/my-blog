@@ -12,18 +12,18 @@
         <div v-html="$page.post.content"></div>
       </div>
       <hr />
-      <!-- <div class="post__tags">
+      <div class="post__tags">
         <span class="post__tag" v-for="tag in $page.post.tags" :key="tag.id">
           {{ tag }}
         </span>
-      </div> -->
-      <!-- <div class="share-container">
+      </div>
+      <div class="share-container">
         <span class="post-date">By, {{ $page.post.author }}</span>
         <button class="share-button" @click="share">
           <i class="las la-user-friends"></i>
           <span class="share__text">Share this article</span>
         </button>
-      </div> -->
+      </div>
     </div>
   </Layout>
 </template>
