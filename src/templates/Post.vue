@@ -43,11 +43,6 @@ query Post ($path: String!) {
 
 <script>
 export default {
-  metaInfo() {
-    return {
-      title: this.title,
-    };
-  },
   data() {
     return {
       title: "",
@@ -58,10 +53,7 @@ export default {
       return window.location.origin + window.location.pathname;
     },
   },
-  created() {
-    console.log(this.$page.post.title);
-    this.title = this.$page.post.title;
-  },
+
   methods: {
     share() {
       if (navigator.share) {
