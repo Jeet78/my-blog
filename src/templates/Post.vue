@@ -1,7 +1,9 @@
 <template>
   <Layout>
     <div class="post--single">
-      <g-link to="/">view all</g-link>
+      <g-link to="/" class="link">
+        <i class="las la-arrow-left"></i> View all articles
+      </g-link>
       <div class="post-title">
         <h1>{{ $page.post.title }}</h1>
         <p class="post-date">

@@ -1,13 +1,11 @@
 <template>
-  <main class="layout">
-    <slot />
-    <!-- <div class="footer">
-        <span>
-          Built & Written with ❤️ by
-        </span>
-        <span class="name">Jeet kacha.</span>
-      </div> -->
-  </main>
+  <transition name="fade" appear>
+    <main class="layout">
+      <!-- a wrapper for slot is needed -->
+      <slot />
+      <!-- the content -->
+    </main>
+  </transition>
 </template>
 
 <style lang="scss">

@@ -1,6 +1,6 @@
 <template>
   <div class="post-lists">
-    <g-link class="post">
+    <g-link class="post" :to="post.path">
       <h3 class="post__title" v-html="post.title" />
       <p class="post__description" v-html="post.description" />
       <div class="post__tags">
