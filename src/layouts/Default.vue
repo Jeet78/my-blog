@@ -1,6 +1,5 @@
 <template>
   <main class="layout">
-    <g-link to="/" class="link">View all articles</g-link>
     <slot />
     <!-- <div class="footer">
         <span>
