@@ -8,7 +8,7 @@ author: "Jeet kacha"
 
 No, I Am not from outer space, I Am from the same generation as you are, but there are few things that bother me about this generation.
 
-**Seeking Validation and approval.**
+## Seeking Validation and approval.
 
 Sometimes we feel depressed when we don't get texts back, someone leaves our messages on seen, or the other person not calling back or ignoring you. But have you tried to find the actual reason behind it? Why do we feel like this? There's one thing that we have to keep in mind that,
 
