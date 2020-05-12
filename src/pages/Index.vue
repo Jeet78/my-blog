@@ -1,45 +1,42 @@
 <template>
-  <Layout>
+  <div>
     <header class="header">
-      <h1 class="app-header" v-html="$page.metadata.siteName" />
-      <!-- <h2 v-html="$page.metaData.siteDescription" /> -->
-      <div class="contact">
-        <a
-          target="_blank"
-          href="https://www.instagram.com/jeet.kacha/"
-          class="contact__link"
-          ><i class="lab la-instagram"></i
-        ></a>
-        <a target="_blank" href="tel:9033123666" class="contact__link"
-          ><i class="lab la-whatsapp"></i
-        ></a>
+      <div class="container header__inner">
+        <h1 class="app-header" v-html="$page.metaData.siteName" />
+        <!-- <h2 v-html="$page.metaData.siteDescription" /> -->
+        <div class="contact">
+          <a target="_blank" href="https://www.instagram.com/jeet.kacha/" class="contact__link">
+            <i class="lab la-instagram"></i>
+          </a>
+          <a target="_blank" href="tel:9033123666" class="contact__link">
+            <i class="lab la-whatsapp"></i>
+          </a>
+        </div>
       </div>
     </header>
-    <section class="posts">
-      <PostList
-        v-for="edge in $page.allPost.edges"
-        :key="edge.node.id"
-        :post="edge.node"
-      />
-    </section>
-  </Layout>
+    <Layout>
+      <section class="posts">
+        <PostList v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
+      </section>
+    </Layout>
+  </div>
 </template>
 
 <script>
 import PostList from "@/components/PostList";
 export default {
   components: {
-    PostList,
+    PostList
   },
   metaInfo: {
-    title: "Blogs",
-  },
+    title: "Blogs"
+  }
 };
 </script>
 
 <page-query>
 query {
-  metadata {
+  metaData {
     siteName
     siteDescription
   }
@@ -61,18 +58,19 @@ query {
 }
 </page-query>
 
-<style lang="scss">
+<style lang="scss" >
 .header {
-  font-family: "lobster two";
+  font-family: "satisfy";
   color: #272342;
-  font-size: 30px;
+  letter-spacing: -0.5px;
   text-align: left;
-  padding: 30px 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  // line-height: 20px;
+  padding: 60px 0px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
   @media (max-width: 450px) {
     padding: 20px 0;
   }
@@ -80,7 +78,8 @@ query {
 
 header h1 {
   margin-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+  font-size: 40px;
   @media (max-width: 450px) {
     margin-top: 10px;
     font-size: 48px;
@@ -91,8 +90,9 @@ header h1 {
   i {
     opacity: 0.5;
     color: #272343;
+    font-size: 28px;
     transition: all 0.2s ease;
-    margin-right: 8px;
+    margin-right: 10px;
     cursor: pointer;
     &:hover {
       opacity: 1;

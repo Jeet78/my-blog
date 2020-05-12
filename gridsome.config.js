@@ -19,8 +19,9 @@ module.exports = {
       // Create posts from markdown files
       use: "@gridsome/source-filesystem",
       options: {
+        path: "content/posts/**/*.md",
         typeName: "Post",
-        path: "content/posts/*.md",
+        // route: "/blog/:slug",
       },
     },
   ],
