@@ -31,6 +31,7 @@ $radius: 10px;
 
 .post-list {
   display: flex;
+  flex-direction: row;
 }
 
 .post {
@@ -45,9 +46,12 @@ $radius: 10px;
   outline: 0;
   max-width: 300px;
   overflow: hidden;
+  margin-right: 20px;
   // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-
+  transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  &:hover {
+    box-shadow: 0 8px 24px -4px transparentize(#272343, 0.9);
+  }
   &:focus {
     box-shadow: none;
     outline: 0;
@@ -61,14 +65,14 @@ $radius: 10px;
     color: #272343;
   }
   &__image {
-    max-height: 200px;
-    overflow: hidden;
     border-radius: $radius;
     position: relative;
+    max-height: 200px;
     transition: all 0.6s cubic-bezier(0.33, 1, 0.68, 1);
 
     img {
       width: 100%;
+      height: 200px;
       object-fit: cover;
       overflow: hidden;
       border-radius: $radius;
@@ -78,6 +82,8 @@ $radius: 10px;
     &:before {
       content: "";
       position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       border-radius: $radius;

@@ -15,7 +15,7 @@
       </div>
     </header>
     <Layout>
-      <section class="posts">
+      <section class="post-list">
         <PostList v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
       </section>
     </Layout>
@@ -59,12 +59,15 @@ query {
 </page-query>
 
 <style lang="scss" >
+.post-list {
+  display: flex;
+}
 .header {
   font-family: "satisfy";
   color: #272342;
   letter-spacing: -0.5px;
   text-align: left;
-  padding: 60px 0px;
+  padding: 40px 0px;
   &__inner {
     display: flex;
     justify-content: space-between;

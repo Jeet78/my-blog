@@ -1,10 +1,12 @@
 ---
-title: "Why our generation seems less happier? Let's find out."
+title: "Why our generation seems less happy ? Let's find out."
 description: "Sometimes we feel depressed when we don't get texts back, someone leaves our messages on seen, or the other person not calling back or ignoring you. But have you tried to find the actual reason behind it?"
 date: 2020-03-24
 tags: ["Mental Health"]
 author: "Jeet kacha"
 ---
+
+![oour-generation](../images/blog.jpg)
 
 No, I Am not from outer space, I Am from the same generation as you are, but there are few things that bother me about this generation.
 

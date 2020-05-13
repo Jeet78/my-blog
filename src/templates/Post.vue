@@ -1,16 +1,16 @@
 <template>
-  <Layout>
+  <Layout class="layout--narrowed">
     <div class="post--single">
       <g-link to="/" class="link">
         <i class="las la-arrow-left"></i> View all articles
       </g-link>
       <div class="post-title">
         <h1>{{ $page.post.title }}</h1>
-        <p class="post-date">{{ $page.post.date }} | {{ $page.post.timeToRead }} min read</p>
+        <p class="post-date">{{ $page.post.timeToRead }} min read</p>
       </div>
-      <div class="post-image">
+      <!-- <div class="post-image">
         <img src="../../content/images/blog.jpg" alt />
-      </div>
+      </div>-->
       <div class="post-content">
         <div v-html="$page.post.content"></div>
       </div>
@@ -78,6 +78,10 @@ export default {
 </script>
 
 <style lang="scss">
+.layout--narrowed {
+  max-width: 860px;
+}
+
 .post--single {
   margin-bottom: 50px;
 }
@@ -171,6 +175,11 @@ $radius: 10px;
   font-size: 18px;
   font-family: "nunito";
   color: #2d334a;
+  img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
   p {
     margin: 28px 0;
     word-spacing: 2px;
