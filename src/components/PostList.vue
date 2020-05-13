@@ -62,6 +62,7 @@ $radius: 10px;
   }
   &__image {
     max-height: 200px;
+    overflow: hidden;
     border-radius: $radius;
     position: relative;
     transition: all 0.6s cubic-bezier(0.33, 1, 0.68, 1);
