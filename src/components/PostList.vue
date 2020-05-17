@@ -181,6 +181,7 @@ $radius: 10px;
     font-weight: 600;
   }
   @media (max-width: 450px) {
+    max-width: 100%;
     &__title {
       font-size: 18px;
     }
