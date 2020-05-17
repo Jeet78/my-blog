@@ -182,6 +182,7 @@ $radius: 10px;
   }
   @media (max-width: 450px) {
     max-width: 100%;
+    margin-right: 0px;
     &__title {
       font-size: 18px;
     }
