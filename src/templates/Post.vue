@@ -1,9 +1,15 @@
 <template>
   <Layout class="layout--narrowed">
     <div class="post--single">
-      <g-link to="/" class="link">
-        <i class="las la-arrow-left"></i> View all articles
-      </g-link>
+      <div class="flex-between">
+        <g-link to="/" class="link">
+          <i class="las la-arrow-left"></i> View all articles
+        </g-link>
+        <h2 style="margin-bottom:0px;" class="theme-toggle" @click="toggleTheme">
+          <i :class="theme"></i>
+        </h2>
+      </div>
+
       <div class="post-title">
         <h1>{{ $page.post.title }}</h1>
         <p class="post-date">{{ $page.post.timeToRead }} min read</p>
@@ -47,7 +53,8 @@ query Post ($path: String!) {
 export default {
   data() {
     return {
-      title: ""
+      title: "",
+      theme: "las la-sun"
     };
   },
   computed: {
@@ -57,6 +64,13 @@ export default {
   },
 
   methods: {
+    toggleTheme() {
+      this.theme == "las la-sun"
+        ? (this.theme = "las la-moon")
+        : (this.theme = "las la-sun");
+
+      document.querySelector("body").classList.toggle("dark");
+    },
     share() {
       if (navigator.share) {
         navigator
@@ -79,7 +93,7 @@ export default {
 
 <style lang="scss">
 .layout--narrowed {
-  max-width: 860px;
+  max-width: 920px;
 }
 
 .post--single {
@@ -87,7 +101,7 @@ export default {
 }
 
 .link {
-  color: #272343;
+  color: var(--text-color);
   text-decoration: none;
   transition: all 0.3s ease;
   opacity: 0.5;
@@ -96,7 +110,6 @@ export default {
   // border-bottom: 1px solid transparent;
   i {
     padding-right: 6px;
-    transition: all 0.3s ease;
   }
   &:hover {
     opacity: 1;
@@ -108,18 +121,18 @@ export default {
   line-height: auto;
   padding: 1em 0;
   margin-bottom: 0px;
-  color: #272343;
+  color: var(--text-color);
   h1 {
-    font-family: "nunito";
+    font-family: var(--accent-font);
     letter-spacing: -1px;
-    font-size: 30px;
+    font-size: 34px;
     font-weight: 800;
     margin-bottom: 0px;
   }
   @media (max-width: 450px) {
     padding: 0.5em 0;
     h1 {
-      font-size: 40px;
+      font-size: var(--post-title-mobile);
     }
   }
 }
@@ -166,15 +179,17 @@ $radius: 10px;
 }
 
 .post-date {
+  font-family: var(--accent-font);
+  letter-spacing: -0.5px;
   font-size: 16px;
   font-weight: 400;
-  opacity: 0.4;
+  opacity: 0.8;
 }
 
 .post-content {
-  font-size: 18px;
-  font-family: "nunito";
-  color: #2d334a;
+  font-size: var(--reading-font-size);
+  font-family: var(--reading-font);
+  color: var(--text-color);
   img {
     width: 100%;
     object-fit: cover;
@@ -183,16 +198,23 @@ $radius: 10px;
   p {
     margin: 28px 0;
     word-spacing: 2px;
-    text-align: justify;
-    line-height: 1.7em;
+    text-align: left;
+    font-weight: 300;
+
+    line-height: var(--reading-line-height);
   }
   blockquote {
     border-left: 4px solid #ffd803;
-    padding-left: 20px;
+    background: var(--accent-color);
+    padding: 20px 15px;
+
     margin: 0px 20px;
     font-style: italic;
-    color: #2d334a;
+    color: var(--text-color);
     font-weight: 500;
+    p {
+      margin: 0px;
+    }
   }
   h1,
   h2,
@@ -202,11 +224,10 @@ $radius: 10px;
   h6 {
     margin-top: 2.5em;
     margin-bottom: 20px;
-    letter-spacing: -0.5px;
   }
   @media (max-width: 450px) {
     p {
-      font-size: 14px;
+      font-size: var(--reading-font-size-mobile);
     }
   }
 }
@@ -249,6 +270,12 @@ hr {
   &:focus {
     outline: 0;
     box-shadow: 0px 6px 18px -2px rgba(39, 35, 67, 0.15);
+  }
+}
+
+.theme-toggle {
+  &:hover {
+    cursor: pointer;
   }
 }
 </style>

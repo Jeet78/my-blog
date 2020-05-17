@@ -47,6 +47,7 @@ query {
         id
         author
         title
+       cover_image
         tags
         timeToRead
         description
@@ -64,10 +65,10 @@ query {
 }
 .header {
   font-family: "satisfy";
-  color: #272342;
+  color: var(--text-color);
   letter-spacing: -0.5px;
   text-align: left;
-  padding: 40px 0px;
+  padding: 50px 0px;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -85,14 +86,14 @@ header h1 {
   font-size: 40px;
   @media (max-width: 450px) {
     margin-top: 10px;
-    font-size: 48px;
+    font-size: 40px;
   }
 }
 
 .contact {
   i {
     opacity: 0.5;
-    color: #272343;
+    color: var(--text-color);
     font-size: 28px;
     transition: all 0.2s ease;
     margin-right: 10px;

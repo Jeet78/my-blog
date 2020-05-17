@@ -1,16 +1,17 @@
 ---
 title: "Why our generation seems less happy ? Let's find out."
 description: "Sometimes we feel depressed when we don't get texts back, someone leaves our messages on seen, or the other person not calling back or ignoring you. But have you tried to find the actual reason behind it?"
+cover_image: ../images/blog.jpg
 date: 2020-03-24
 tags: ["Mental Health"]
 author: "Jeet kacha"
 ---
 
-![oour-generation](../images/blog.jpg)
+![our-generation](../images/blog.jpg)
 
 No, I Am not from outer space, I Am from the same generation as you are, but there are few things that bother me about this generation.
 
-### Seeking Validation and approval.
+## Seeking Validation and approval.
 
 Sometimes we feel depressed when we don't get texts back, someone leaves our messages on seen, or the other person not calling back or ignoring you. But have you tried to find the actual reason behind it? Why do we feel like this? There's one thing that we have to keep in mind that,
 
@@ -20,7 +21,7 @@ It's all in our mind, we are creating an illusion by ourselves. People to people
 
 > Our lives are uncertain, and we assume that people in our lives are permanent. GREAT!
 
-### Social Media
+## Social Media
 
 Another factor that is taking control of our lives is social media. I am not saying it is bad; I also use it sometimes, but the way people are using social media is bad.
 
@@ -28,7 +29,7 @@ The concern is that people only portray their good life moments in social media,
 
 Social likes & comments are like short dopamine shots, that is the reason we get excited immediately when we get notification of a comment or a like on our photo. A week earlier one of my friends uploaded a nice-looking photo on Instagram, and after a day he deleted it. And asking the reason for it; I got to know that he didn't get enough comments on the photo thus deleted it; assuming it was not good enough, which is again referring to the same thing I have mentioned in point one.
 
-### Memes
+## Memes
 
 Memes are great, no doubt! It makes us laugh, which is great for our mental health. But let me tell you the problem here, we have implied a mindset that memes are used to make us laugh always, but that's not true. Memes give us a false satisfaction sometimes, e.g. you have seen a meme that one piece of paper can't decide my future and then you see there are many people commented things like so true, 100%, Soo me, etc. and you think you are not alone; there are also thousands of people feels the same way and decide not to study thereafter and you fail that exam. Then again, you see memes on the result and the same comments on it and feel relieved, but the thing is that you are laughing at your own failure and on your own life.
 

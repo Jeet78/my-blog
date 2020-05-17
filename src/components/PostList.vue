@@ -2,15 +2,17 @@
   <div class="post-list">
     <g-link class="post" :to="post.path" v-fp>
       <div class="post__image">
-        <img src="../../content/images/blog.jpg" alt />
+        <img :src="post.cover_image.src" alt />
         <div class="post__tags">
           <span class="post__tag" v-for="tag in post.tags" :key="tag.id">{{ tag }}</span>
         </div>
       </div>
-      <h3 class="post__title" v-html="post.title" />
-      <div class="post__data">
-        <p class="post__date" v-html="post.date" />
-        <p class="post__readtime">{{ post.timeToRead }} mins read</p>
+      <div class="post__inner">
+        <h3 class="post__title" v-html="post.title" />
+        <div class="post__data">
+          <p class="post__date" v-html="post.date" />
+          <p class="post__readtime">{{ post.timeToRead }} mins read</p>
+        </div>
       </div>
     </g-link>
   </div>
@@ -18,14 +20,14 @@
 
 <script>
 export default {
-  props: ["post"]
+  props: ["post"],
+  mounted() {
+    console.log(this.post.cover_image);
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css?family=Baloo+2:400,500,600,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900&display=swap");
-
 // variables
 $radius: 10px;
 
@@ -35,16 +37,16 @@ $radius: 10px;
 }
 
 .post {
-  font-family: "nunito";
+  font-family: var(--accent-font);
   display: block;
   border-radius: $radius;
   text-decoration: none;
-  padding: 15px;
+  // padding: 15px;
   transition: all 0.5s ease-in-out;
-  background: white;
+  background: var(--accent-color);
   box-shadow: none;
   outline: 0;
-  max-width: 300px;
+  max-width: 360px;
   overflow: hidden;
   margin-right: 20px;
   // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -64,8 +66,11 @@ $radius: 10px;
     background: white;
     color: #272343;
   }
+  &__inner {
+    padding: 20px 16px;
+  }
   &__image {
-    border-radius: $radius;
+    border-radius: 0;
     position: relative;
     max-height: 200px;
     transition: all 0.6s cubic-bezier(0.33, 1, 0.68, 1);
@@ -75,7 +80,7 @@ $radius: 10px;
       height: 200px;
       object-fit: cover;
       overflow: hidden;
-      border-radius: $radius;
+      border-radius: 0;
       transition: all 0.6s cubic-bezier(0.33, 1, 0.68, 1);
     }
 
@@ -113,13 +118,12 @@ $radius: 10px;
   }
   &__title {
     // font-family: "karla";
-    // letter-spacing: -0.5px;
-
-    color: #272343cc;
+    letter-spacing: -0.5px;
+    color: var(--text-color);
     font-weight: 700;
     font-size: 18px;
     margin-bottom: 0px;
-    margin-top: 12px;
+    margin-top: 0px;
     line-height: 1.5em;
   }
   &__description {
@@ -137,12 +141,12 @@ $radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 5px 0;
+    // margin: 5px 0;
   }
   &__date,
   &__readtime {
     font-size: 13px;
-    color: #2d334a;
+    color: var(--text-color);
     opacity: 0.5;
     margin-bottom: 0px;
   }
@@ -163,7 +167,7 @@ $radius: 10px;
     margin-right: 8px;
     border-radius: $radius;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 400;
     opacity: 0.8;
     transition: all 0.6s cubic-bezier(0.33, 1, 0.68, 1);
   }
@@ -178,7 +182,7 @@ $radius: 10px;
   }
   @media (max-width: 450px) {
     &__title {
-      font-size: 22px;
+      font-size: 18px;
     }
     &__description {
       font-size: 14px;
