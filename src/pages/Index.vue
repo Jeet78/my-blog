@@ -62,6 +62,10 @@ query {
 <style lang="scss" >
 .post-list {
   display: flex;
+  flex-direction: row;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 .header {
   font-family: "satisfy";

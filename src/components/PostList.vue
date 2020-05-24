@@ -34,6 +34,9 @@ $radius: 10px;
 .post-list {
   display: flex;
   flex-direction: row;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .post {
@@ -141,6 +144,7 @@ $radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: auto;
     // margin: 5px 0;
   }
   &__date,
@@ -181,6 +185,7 @@ $radius: 10px;
     font-weight: 600;
   }
   @media (max-width: 450px) {
+    margin-bottom: 20px;
     max-width: 100%;
     margin-right: 0px;
     &__title {

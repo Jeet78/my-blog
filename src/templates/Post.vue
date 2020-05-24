@@ -57,6 +57,10 @@ export default {
       theme: "las la-sun"
     };
   },
+  created() {
+    console.log(this.$page.post.title);
+    this.title = this.$page.post.title;
+  },
   computed: {
     link() {
       return window.location.origin + window.location.pathname;

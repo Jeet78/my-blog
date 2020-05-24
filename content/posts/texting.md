@@ -1,8 +1,8 @@
 ---
 title: "You should avoid too much texting."
-cover_image: ../images/blog.jpg
+cover_image: ../images/texting.jpg
 date: 2020-05-24
-tags: ["Mental Health"]
+tags: ["Self Improvement"]
 author: "Jeet kacha"
 ---
 
