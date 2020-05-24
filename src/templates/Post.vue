@@ -51,12 +51,18 @@ query Post ($path: String!) {
 
 <script>
 export default {
+  metaInfo() {
+    return {
+      title: this.title
+    };
+  },
   data() {
     return {
       title: "",
       theme: "las la-sun"
     };
   },
+
   created() {
     console.log(this.$page.post.title);
     this.title = this.$page.post.title;
