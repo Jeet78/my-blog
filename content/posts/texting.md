@@ -6,6 +6,8 @@ tags: ["Self Improvement"]
 author: "Jeet kacha"
 ---
 
+![texting](../images/texting.jpg)
+
 With the evolution of time, the methods of communication are also changed and texting is one of the most conventional methods of communication these days and we use it on a daily bases.
 
 When we text or chat it doesn't feel as pleasant as meeting them in-person, consequently many people start to get anxious at some point.
