@@ -1,5 +1,5 @@
 ---
-title: "You should avoid too much texting."
+title: "Texting... Why ?"
 cover_image: ../images/texting.jpg
 date: 2020-05-24
 tags: ["Self Improvement"]
