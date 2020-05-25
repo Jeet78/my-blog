@@ -1,5 +1,5 @@
 ---
-title: "Texting... Why ?"
+title: "Texting over meeting! Why ?"
 cover_image: ../images/texting.jpg
 date: 2020-05-24
 tags: ["Self Improvement"]
